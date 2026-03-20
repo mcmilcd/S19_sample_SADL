@@ -1,0 +1,459 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:clr="http://linkedUpdate/Clearances#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:LnkAna="http://linkedUpdate/LinkedAnalysis#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://linkedUpdate/Clearances">
+    <owl:imports rdf:resource="http://linkedUpdate/LinkedAnalysis"/>
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'Clearances.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Gap_Location">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Drawing">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>D</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Analysis_Type"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Analysis_Type">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#HPC">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>C</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Module"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Blade_Tip">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>T</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Gap_Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#LPC">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>B</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Module"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Deflection">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Measured_Parameter"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Engine">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>E</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Assembly_Level"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Fan">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>F</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Module"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Part">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>P</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Assembly_Level"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#FEM">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>F</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Analysis_Type"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Rotor">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>R</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Part_Type"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Not_a_part">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>N</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Part_Type"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Part_Type">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Bearing">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>B</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part_Type"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Disk">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>D</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Part"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Shaft">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>F</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Part"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Measured_Parameter"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Tag">
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/LinkedAnalysis#Linked_File"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Not_a_gap">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>N</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Gap_Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Part">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Seal_Gap">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>S</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Gap_Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Other">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>T</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Module">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>M</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Assembly_Level"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Wheel_Space">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>W</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Gap_Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Measurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>M</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Analysis_Type"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Measured_Parameter">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Case">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>C</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Buffer_Cavity">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>B</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Gap_Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Seal">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>S</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Overlap">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>O</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Gap_Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Assembly_Level">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Stator">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>S</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part_Type"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Flowpath_Steps">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>F</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Gap_Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Blade_Airfoil">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>B</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Nozzle">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>Z</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Not_a_Part">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>N</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#X-section">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>X</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Analysis_Type"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#LPT">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>T</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Module"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Shroud">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>O</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#HPT">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>H</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Module"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Retainer">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>R</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Hanger">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>H</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Module">
+    <rdfs:subClassOf rdf:resource="http://arcos.rack/PROV-S#ENTITY"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Blade">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>B</owl:hasValue>
+        <owl:onProperty rdf:resource="http://arcos.rack/PROV-S#title"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://linkedUpdate/Clearances#Clearance_Case">
+    <rdfs:subClassOf rdf:resource="http://linkedUpdate/LinkedAnalysis#Linked_File"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://linkedUpdate/Clearances#assemblyLevel">
+    <rdfs:range rdf:resource="http://linkedUpdate/Clearances#Clearance_Assembly_Level"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://linkedUpdate/Clearances#gapLocation">
+    <rdfs:range rdf:resource="http://linkedUpdate/Clearances#Clearance_Gap_Location"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://linkedUpdate/Clearances#clearanceMeasuredParameter">
+    <rdfs:range rdf:resource="http://linkedUpdate/Clearances#Clearance_Measured_Parameter"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://linkedUpdate/Clearances#partType">
+    <rdfs:range rdf:resource="http://linkedUpdate/Clearances#Clearance_Part_Type"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://linkedUpdate/Clearances#tagType">
+    <rdfs:range rdf:resource="http://linkedUpdate/Clearances#Clearance_Analysis_Type"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://linkedUpdate/Clearances#clearancePart">
+    <rdfs:range rdf:resource="http://linkedUpdate/Clearances#Clearance_Part"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://linkedUpdate/Clearances#module">
+    <rdfs:range rdf:resource="http://linkedUpdate/Clearances#Clearance_Module"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://linkedUpdate/Clearances#tempCase">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Clearance_Case"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://linkedUpdate/Clearances#stage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Clearance_Case"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://linkedUpdate/Clearances#analysisNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://linkedUpdate/Clearances#positionNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://linkedUpdate/Clearances#angle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://linkedUpdate/Clearances#Tag"/>
+  </owl:DatatypeProperty>
+  <clr:Tag rdf:about="http://linkedUpdate/Clearances#Deflection_S2T1Nozzle_FPH021S000S01">
+    <clr:module rdf:resource="http://linkedUpdate/Clearances#HPT"/>
+    <clr:positionNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >21</clr:positionNumber>
+    <clr:angle rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</clr:angle>
+    <clr:gapLocation rdf:resource="http://linkedUpdate/Clearances#Seal_Gap"/>
+    <clr:clearancePart rdf:resource="http://linkedUpdate/Clearances#Nozzle"/>
+    <clr:assemblyLevel rdf:resource="http://linkedUpdate/Clearances#Part"/>
+    <clr:partType rdf:resource="http://linkedUpdate/Clearances#Stator"/>
+    <clr:clearanceMeasuredParameter rdf:resource="http://linkedUpdate/Clearances#Deflection"/>
+    <clr:analysisNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</clr:analysisNumber>
+    <clr:tagType rdf:resource="http://linkedUpdate/Clearances#FEM"/>
+  </clr:Tag>
+</rdf:RDF>
