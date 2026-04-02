@@ -1,0 +1,232 @@
+uri "http://Ontology_BSCU/BSCU" alias BSCU.
+    BSCU is a class.
+ 
+      power_in (note "input power to the BSCU") describes BSCU with values of type POWER_IN.
+      power_in of BSCU only has values of type POWER_IN.
+      power_in of BSCU has exactly 2 values.
+
+      pilot_controls (note "pilot control data") describes BSCU with values of type PILOT_CONTROLS.
+      pilot_controls of BSCU only has values of type PILOT_CONTROLS.
+      pilot_controls of BSCU has exactly 1 values.
+
+      truck (note "input data from the main landing gear trucks") describes BSCU with values of type TRUCK.
+      truck of BSCU only has values of type TRUCK.
+      truck of BSCU has exactly 2 values.
+
+      proximity_data (note "data from proximity sensing system") describes BSCU with values of type PROXIMITY_DATA.
+      proximity_data of BSCU only has values of type PROXIMITY_DATA.
+      proximity_data of BSCU has exactly 1 values.
+
+      earth_reference_data (note "earth reference data") describes BSCU with values of type EARTH_REFERENCE_DATA.
+      earth_reference_data of BSCU only has values of type EARTH_REFERENCE_DATA.
+      earth_reference_data of BSCU has exactly 3 values.
+
+      hyd_status (note "hydraulic pressure to the BSCU") describes BSCU with values of type HYD_STATUS.
+      hyd_status of BSCU only has values of type HYD_STATUS.
+      hyd_status of BSCU has exactly 2 values.
+
+      landing_gear_lever (note "landing gear lever position from the pilot") describes BSCU with values of type COMMAND_STATUS.
+      landing_gear_lever of BSCU only has values of type COMMAND_STATUS.
+      landing_gear_lever of BSCU has exactly 1 values.
+
+      selector_valve_shutoff (note "BSCU command of the hydraulic selector valve") describes BSCU with values of type COMMAND_STATUS.
+      selector_valve_shutoff of BSCU only has values of type COMMAND_STATUS.
+      selector_valve_shutoff of BSCU has exactly 1 values.
+
+      emergency_accumulator (note "BSCU command of the emergency accumulator") describes BSCU with values of type integer.
+      emergency_accumulator of BSCU only has values of type integer.
+      emergency_accumulator of BSCU has at most 1 values.
+
+      BSCU_status (note "status of the BSCU") describes BSCU with values of type BSCU_STATUS.
+      BSCU_status of BSCU only has values of type BSCU_STATUS.
+      BSCU_status of BSCU has exactly 1 values.
+
+      monitor (note "dual channel monitor data") describes BSCU with values of type MONITOR.
+      monitor of BSCU only has values of type MONITOR.
+      monitor of BSCU has exactly 2 values.
+
+      mode (note "BSCU mode: normal, alternate, emergency") describes BSCU with values of type MODE.
+      mode of BSCU only has values of type MODE.
+      mode of BSCU has exactly 1 values.
+
+    WHEEL_DATA is a class, can only be one of {Wheel_1,Wheel_2,Wheel_3,Wheel_4}.
+ 
+      wheel_speed (note "actual wheel speed") describes WHEEL_DATA with values of type integer.
+      wheel_speed of WHEEL_DATA only has values of type integer.
+      wheel_speed of WHEEL_DATA has exactly 1 values.
+
+      wheel_speed_ind (note "indicated wheel speed") describes WHEEL_DATA with values of type integer.
+      wheel_speed_ind of WHEEL_DATA only has values of type integer.
+      wheel_speed_ind of WHEEL_DATA has exactly 1 values.
+
+      brake_temp (note "actual brake temperature") describes WHEEL_DATA with values of type decimal.
+      brake_temp of WHEEL_DATA has exactly 1 values.
+
+      brake_temp_ind (note "indicated brake temperature") describes WHEEL_DATA with values of type decimal.
+      brake_temp_ind of WHEEL_DATA has exactly 1 values.
+
+      tire_pressure (note "actual tire pressure") describes WHEEL_DATA with values of type decimal.
+      tire_pressure of WHEEL_DATA has exactly 1 values.
+
+      tire_pressure_ind (note "indicated tire pressure") describes WHEEL_DATA with values of type decimal.
+      tire_pressure_ind of WHEEL_DATA has exactly 1 values.
+
+      command (note "commanded values to the servos") describes WHEEL_DATA with values of type COMMAND.
+      command of WHEEL_DATA only has values of type COMMAND.
+      command of WHEEL_DATA has exactly 2 values.
+
+    POWER_IN is a class, can only be one of {Power_1,Power_2}.
+ 
+      power_value (note "input power value") describes POWER_IN with values of type integer.
+      power_value of POWER_IN only has values of type integer.
+      power_value of POWER_IN has exactly 1 values.
+
+   PEDAL_POS is a class, can only be one of {Pedal_L,Pedal_R}.
+ 
+      //ObjectId=SYS-ONT-20
+      //ParentId=SYS-ONT-6
+      pedal_pos_value (note "pilot commanded pedal position") describes PEDAL_POS with values of type integer.
+      pedal_pos_value of PEDAL_POS only has values of type integer.
+      pedal_pos_value of PEDAL_POS has exactly 1 values.
+
+    MODE is a class, can only be one of {Normal,Alternate,Emergency}.
+ 
+    BSCU_STATUS is a class.
+ 
+      brake_status (note "BSCU commanded state of the brakes") describes BSCU_STATUS with values of type integer.
+      brake_status of BSCU_STATUS only has values of type integer.
+      brake_status of BSCU_STATUS has at most 1 values.
+
+      parking_brake_lever (note "status of the parking brake lever set by pilot") describes BSCU_STATUS with values of type COMMAND_STATUS.
+      parking_brake_lever of BSCU_STATUS only has values of type COMMAND_STATUS.
+      parking_brake_lever of BSCU_STATUS has exactly 1 values.
+
+      fault_data (note "BSCU fault data") describes BSCU_STATUS with values of type DATA.
+      fault_data of BSCU_STATUS only has values of type DATA.
+      fault_data of BSCU_STATUS has exactly 1 values.
+
+    HYD_STATUS is a class, can only be one of {Hyd_1,Hyd_2}.
+ 
+      pressure (note "hydraulic pressure") describes HYD_STATUS with values of type integer.
+      pressure of HYD_STATUS only has values of type integer.
+      pressure of HYD_STATUS has exactly 1 values.
+
+      threshold (note "minimum hydraulic pressure") describes HYD_STATUS with values of type integer.
+      threshold of HYD_STATUS only has values of type integer.
+      threshold of HYD_STATUS has exactly 1 values.
+
+      fail (note "failure when hydraulic pressure is below minimum hydraulic pressure") describes HYD_STATUS with values of type DISCRETE_VALUE.
+      fail of HYD_STATUS only has values of type DISCRETE_VALUE.
+      fail of HYD_STATUS has exactly 1 values.
+
+    MONITOR is a class, can only be one of {Monitor_1,Monitor_2}.
+ 
+      validity (note "BSCU validity status") describes MONITOR with values of type VALIDITY.
+      validity of MONITOR only has values of type VALIDITY.
+      validity of MONITOR has exactly 1 values.
+
+    COMMAND is a class, can only be one of {Command_1,Command_2}.
+ 
+      anti_skid_cmd (note "anti-skid command") describes COMMAND with values of type integer.
+      anti_skid_cmd of COMMAND only has values of type integer.
+      anti_skid_cmd of COMMAND has exactly 1 values.
+
+      anti_skid_shutoff (note "anti-skid shutoff") describes COMMAND with values of type integer.
+      anti_skid_shutoff of COMMAND only has values of type integer.
+      anti_skid_shutoff of COMMAND has exactly 1 values.
+
+      anti_skid_mon (note "anti-skid monitor") describes COMMAND with values of type integer.
+      anti_skid_mon of COMMAND only has values of type integer.
+      anti_skid_mon of COMMAND has exactly 1 values.
+
+    /*
+    interface with main landing gear trucks
+    */
+    TRUCK is a class, can only be one of {Truck_Left,Truck_Right}.
+ 
+      wheel_data (note "actual data for each wheel") describes TRUCK with values of type WHEEL_DATA.
+      wheel_data of TRUCK only has values of type WHEEL_DATA.
+      wheel_data of TRUCK has exactly 4 values.
+
+    /*
+    pilot control data
+    */
+    PILOT_CONTROLS is a class.
+ 
+      pedal_pos (note "brake command from each of the pilot's pedals") describes PILOT_CONTROLS with values of type PEDAL_POS.
+      pedal_pos of PILOT_CONTROLS only has values of type PEDAL_POS.
+      pedal_pos of PILOT_CONTROLS has exactly 2 values.
+
+      parking_brake_lever (note "status of the parking brake lever set by pilot") describes PILOT_CONTROLS with values of type COMMAND_STATUS.
+      parking_brake_lever of PILOT_CONTROLS only has values of type COMMAND_STATUS.
+      parking_brake_lever of PILOT_CONTROLS has exactly 1 values.
+
+      autobrake_selector (note "status of the autobrake switch set by pilot") describes PILOT_CONTROLS with values of type AUTOBRAKE_SELECTION.
+      autobrake_selector of PILOT_CONTROLS only has values of type AUTOBRAKE_SELECTION.
+      autobrake_selector of PILOT_CONTROLS has exactly 1 values.
+
+      engine_controls (note "status of the engine controls set by pilot") describes PILOT_CONTROLS with values of type ENGINE_CONTROLS.
+      engine_controls of PILOT_CONTROLS only has values of type ENGINE_CONTROLS.
+      engine_controls of PILOT_CONTROLS has exactly 2 values.
+
+      BSCU_mode_command describes PILOT_CONTROLS with values of type MODE.
+      BSCU_mode_command of PILOT_CONTROLS only has values of type MODE.
+      BSCU_mode_command of PILOT_CONTROLS has exactly 1 values.
+
+    PROXIMITY_DATA is a class.
+ 
+      air_ground (note "air/ground status from the truck tilt") describes PROXIMITY_DATA with values of type AIR_GROUND.
+      air_ground of PROXIMITY_DATA only has values of type AIR_GROUND.
+      air_ground of PROXIMITY_DATA has exactly 1 values.
+
+      speed_brake_lever (note "speed brake lever position from the pilot") describes PROXIMITY_DATA with values of type COMMAND_STATUS.
+      speed_brake_lever of PROXIMITY_DATA only has values of type COMMAND_STATUS.
+      speed_brake_lever of PROXIMITY_DATA has exactly 1 values.
+
+    EARTH_REFERENCE_DATA is a class, can only be one of {Ers_1,Ers_2,Ers_3}.
+ 
+      ground_speed (note "ground speed") describes EARTH_REFERENCE_DATA with values of type decimal.
+      ground_speed of EARTH_REFERENCE_DATA has exactly 1 values.
+
+      pitch (note "pitch attitude") describes EARTH_REFERENCE_DATA with values of type decimal.
+      pitch of EARTH_REFERENCE_DATA has exactly 1 values.
+
+      long_accel (note "longitudinal acceleration") describes EARTH_REFERENCE_DATA with values of type decimal.
+      long_accel of EARTH_REFERENCE_DATA has exactly 1 values.
+
+    ENGINE_CONTROLS is a class, can only be one of {Left_Engine,Right_Engine}.
+ 
+      tra (note "thrust lever resolver angle") describes ENGINE_CONTROLS with values of type integer.
+      tra of ENGINE_CONTROLS only has values of type integer.
+      tra of ENGINE_CONTROLS has exactly 1 values.
+
+      fuel_cutoff (note "status of the fuel cutoff switch set by pilot") describes ENGINE_CONTROLS with values of type COMMAND_STATUS.
+      fuel_cutoff of ENGINE_CONTROLS only has values of type COMMAND_STATUS.
+      fuel_cutoff of ENGINE_CONTROLS has exactly 1 values.
+
+    COMMAND_STATUS is a class, can only be one of {Not_Commanded,Commanded}.
+ 
+    AIR_GROUND is a class, can only be one of {Ground,Air}.
+ 
+    AUTOBRAKE_SELECTION is a class, can only be one of {Minimum,Normal,Maximum}.
+ 
+    DISCRETE_VALUE is a class, can only be one of {Not_Asserted,Asserted}.
+ 
+    VALIDITY is a class, can only be one of {Invalid,Valid}.
+ 
+    /*
+    range for values defined in downstream decomposition
+    */
+    DATA is a class.
+ 
+      _value_int (note "implied property used in decomposition") describes DATA with values of type integer.
+      _value_int of DATA only has values of type integer.
+      _value_int of DATA has exactly 1 values.
+
+      _value (note "implied property used in decomposition") describes DATA with values of type decimal.
+      _value of DATA has exactly 1 values.
+
+
+DATA has impliedProperty _value.
+DATA has impliedProperty _value_int.
+    

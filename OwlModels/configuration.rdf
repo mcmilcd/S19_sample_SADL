@@ -4,7 +4,8 @@
   <Category rdf:about="http://com.ge.research.sadl.configuration#ReasonerSpec">
     <reasonerClassName>com.ge.research.sadl.swi_prolog.reasoner.SWIPrologReasonerPlugin</reasonerClassName>
   </Category>
+  <Category rdf:about="http://com.ge.research.sadl.configuration#Builtin"/>
   <rdf:Description rdf:about="http://com.ge.research.sadl.configuration#SWI-Prolog-Reasoner">
-    <translatorClassName>com.ge.research.sadl.jena.translator.JenaTranslatorPlugin</translatorClassName>
+    <translatorClassName>com.ge.research.sadl.swi_prolog.translator.SWIPrologTranslatorPlugin</translatorClassName>
   </rdf:Description>
 </rdf:RDF>
