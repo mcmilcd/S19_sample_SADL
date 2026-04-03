@@ -1,0 +1,1166 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:builtinfunctions="http://sadl.org/builtinfunctions#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sadlimplicitmodel="http://sadl.org/sadlimplicitmodel#"
+    xmlns:BSCU="http://Ontology_BSCU/BSCU#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:sadlbasemodel="http://sadl.org/sadlbasemodel#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://Ontology_BSCU/BSCU">
+    <owl:imports rdf:resource="http://sadl.org/builtinfunctions"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlimplicitmodel"/>
+    <owl:imports rdf:resource="http://sadl.org/sadlbasemodel"/>
+    <rdfs:comment xml:lang="en">This ontology was created from a SADL file 'BSCU.sadl' and should not be directly edited.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#VALIDITY">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:VALIDITY rdf:about="http://Ontology_BSCU/BSCU#Invalid"/>
+          <BSCU:VALIDITY rdf:about="http://Ontology_BSCU/BSCU#Valid"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#DATA">
+    <sadlimplicitmodel:impliedProperty>
+      <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#_value_int"/>
+    </sadlimplicitmodel:impliedProperty>
+    <sadlimplicitmodel:impliedProperty>
+      <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#_value"/>
+    </sadlimplicitmodel:impliedProperty>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#_value"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#_value_int"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#_value_int"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#MODE">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:AUTOBRAKE_SELECTION rdf:about="http://Ontology_BSCU/BSCU#Normal">
+            <rdf:type rdf:resource="http://Ontology_BSCU/BSCU#MODE"/>
+          </BSCU:AUTOBRAKE_SELECTION>
+          <BSCU:MODE rdf:about="http://Ontology_BSCU/BSCU#Alternate"/>
+          <BSCU:MODE rdf:about="http://Ontology_BSCU/BSCU#Emergency"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#WHEEL_DATA">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#brake_temp_ind"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#brake_temp"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://Ontology_BSCU/BSCU#COMMAND"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#command"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:WHEEL_DATA rdf:about="http://Ontology_BSCU/BSCU#Wheel_1"/>
+          <BSCU:WHEEL_DATA rdf:about="http://Ontology_BSCU/BSCU#Wheel_2"/>
+          <BSCU:WHEEL_DATA rdf:about="http://Ontology_BSCU/BSCU#Wheel_3"/>
+          <BSCU:WHEEL_DATA rdf:about="http://Ontology_BSCU/BSCU#Wheel_4"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_speed"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#tire_pressure_ind"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_speed_ind"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_speed"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#tire_pressure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:WHEEL_DATA rdf:about="http://Ontology_BSCU/BSCU#Wheel_1"/>
+          <BSCU:WHEEL_DATA rdf:about="http://Ontology_BSCU/BSCU#Wheel_2"/>
+          <BSCU:WHEEL_DATA rdf:about="http://Ontology_BSCU/BSCU#Wheel_3"/>
+          <BSCU:WHEEL_DATA rdf:about="http://Ontology_BSCU/BSCU#Wheel_4"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_speed_ind"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#command"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#DISCRETE_VALUE">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:DISCRETE_VALUE rdf:about="http://Ontology_BSCU/BSCU#Not_Asserted"/>
+          <BSCU:DISCRETE_VALUE rdf:about="http://Ontology_BSCU/BSCU#Asserted"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#AIR_GROUND">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:AIR_GROUND rdf:about="http://Ontology_BSCU/BSCU#Ground"/>
+          <BSCU:AIR_GROUND rdf:about="http://Ontology_BSCU/BSCU#Air"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#MONITOR">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#validity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#VALIDITY"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#validity"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:MONITOR rdf:about="http://Ontology_BSCU/BSCU#Monitor_1"/>
+          <BSCU:MONITOR rdf:about="http://Ontology_BSCU/BSCU#Monitor_2"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#BSCU_STATUS">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fault_data"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#DATA"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fault_data"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#parking_brake_lever"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#parking_brake_lever"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#brake_status"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#brake_status"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#AUTOBRAKE_SELECTION">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:AUTOBRAKE_SELECTION rdf:about="http://Ontology_BSCU/BSCU#Minimum"/>
+          <BSCU:AUTOBRAKE_SELECTION rdf:about="http://Ontology_BSCU/BSCU#Normal"/>
+          <BSCU:AUTOBRAKE_SELECTION rdf:about="http://Ontology_BSCU/BSCU#Maximum"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#COMMAND_STATUS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:COMMAND_STATUS rdf:about="http://Ontology_BSCU/BSCU#Not_Commanded"/>
+          <BSCU:COMMAND_STATUS rdf:about="http://Ontology_BSCU/BSCU#Commanded"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#HYD_STATUS">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fail"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#DISCRETE_VALUE"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fail"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#threshold"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#threshold"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#pressure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#pressure"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:HYD_STATUS rdf:about="http://Ontology_BSCU/BSCU#Hyd_1"/>
+          <BSCU:HYD_STATUS rdf:about="http://Ontology_BSCU/BSCU#Hyd_2"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#PEDAL_POS">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:PEDAL_POS rdf:about="http://Ontology_BSCU/BSCU#Pedal_L"/>
+          <BSCU:PEDAL_POS rdf:about="http://Ontology_BSCU/BSCU#Pedal_R"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#pedal_pos_value"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#pedal_pos_value"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:PEDAL_POS rdf:about="http://Ontology_BSCU/BSCU#Pedal_L"/>
+          <BSCU:PEDAL_POS rdf:about="http://Ontology_BSCU/BSCU#Pedal_R"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#COMMAND">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_mon"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_mon"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_shutoff"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_shutoff"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_cmd"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_cmd"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:COMMAND rdf:about="http://Ontology_BSCU/BSCU#Command_1"/>
+          <BSCU:COMMAND rdf:about="http://Ontology_BSCU/BSCU#Command_2"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#PILOT_CONTROLS">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#parking_brake_lever"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#parking_brake_lever"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#AUTOBRAKE_SELECTION"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#autobrake_selector"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#pedal_pos"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#PEDAL_POS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#pedal_pos"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://Ontology_BSCU/BSCU#ENGINE_CONTROLS"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#engine_controls"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#autobrake_selector"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#engine_controls"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#BSCU_mode_command"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#MODE"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#BSCU_mode_command"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#EARTH_REFERENCE_DATA">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#long_accel"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#pitch"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#ground_speed"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:EARTH_REFERENCE_DATA rdf:about="http://Ontology_BSCU/BSCU#Ers_1"/>
+          <BSCU:EARTH_REFERENCE_DATA rdf:about="http://Ontology_BSCU/BSCU#Ers_2"/>
+          <BSCU:EARTH_REFERENCE_DATA rdf:about="http://Ontology_BSCU/BSCU#Ers_3"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#TRUCK">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >4</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_data"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_data"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:TRUCK rdf:about="http://Ontology_BSCU/BSCU#Truck_Left"/>
+          <BSCU:TRUCK rdf:about="http://Ontology_BSCU/BSCU#Truck_Right"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#BSCU">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#pilot_controls"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#BSCU_status"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#MODE"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#mode"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#EARTH_REFERENCE_DATA"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#earth_reference_data"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#BSCU_STATUS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#BSCU_status"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#monitor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#selector_valve_shutoff"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://Ontology_BSCU/BSCU#PROXIMITY_DATA"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#proximity_data"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#truck"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://Ontology_BSCU/BSCU#POWER_IN"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#power_in"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >3</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#earth_reference_data"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#power_in"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#TRUCK"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#truck"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#landing_gear_lever"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#emergency_accumulator"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#emergency_accumulator"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#landing_gear_lever"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#PILOT_CONTROLS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#pilot_controls"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#hyd_status"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#mode"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#selector_valve_shutoff"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#proximity_data"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#MONITOR"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#monitor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#HYD_STATUS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#hyd_status"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#ENGINE_CONTROLS">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fuel_cutoff"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fuel_cutoff"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#tra"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#tra"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:ENGINE_CONTROLS rdf:about="http://Ontology_BSCU/BSCU#Left_Engine"/>
+          <BSCU:ENGINE_CONTROLS rdf:about="http://Ontology_BSCU/BSCU#Right_Engine"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#POWER_IN">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#power_value"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#power_value"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+          <BSCU:POWER_IN rdf:about="http://Ontology_BSCU/BSCU#Power_1"/>
+          <BSCU:POWER_IN rdf:about="http://Ontology_BSCU/BSCU#Power_2"/>
+        </owl:oneOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://Ontology_BSCU/BSCU#PROXIMITY_DATA">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#speed_brake_lever"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#speed_brake_lever"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#air_ground"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://Ontology_BSCU/BSCU#AIR_GROUND"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#air_ground"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#selector_valve_shutoff">
+    <rdfs:comment xml:lang="en">BSCU command of the hydraulic selector valve</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#command">
+    <rdfs:comment xml:lang="en">commanded values to the servos</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#COMMAND"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#proximity_data">
+    <rdfs:comment xml:lang="en">data from proximity sensing system</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#PROXIMITY_DATA"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fail">
+    <rdfs:comment xml:lang="en">failure when hydraulic pressure is below minimum hydraulic pressure</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#DISCRETE_VALUE"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#HYD_STATUS"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#power_in">
+    <rdfs:comment xml:lang="en">input power to the BSCU</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#POWER_IN"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fault_data">
+    <rdfs:comment xml:lang="en">BSCU fault data</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#DATA"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU_STATUS"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#truck">
+    <rdfs:comment xml:lang="en">input data from the main landing gear trucks</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#TRUCK"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#engine_controls">
+    <rdfs:comment xml:lang="en">status of the engine controls set by pilot</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#ENGINE_CONTROLS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#PILOT_CONTROLS"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#BSCU_mode_command">
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#MODE"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#PILOT_CONTROLS"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#air_ground">
+    <rdfs:comment xml:lang="en">air/ground status from the truck tilt</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#AIR_GROUND"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#PROXIMITY_DATA"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#landing_gear_lever">
+    <rdfs:comment xml:lang="en">landing gear lever position from the pilot</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#fuel_cutoff">
+    <rdfs:comment xml:lang="en">status of the fuel cutoff switch set by pilot</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#ENGINE_CONTROLS"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#pilot_controls">
+    <rdfs:comment xml:lang="en">pilot control data</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#PILOT_CONTROLS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#speed_brake_lever">
+    <rdfs:comment xml:lang="en">speed brake lever position from the pilot</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#PROXIMITY_DATA"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#monitor">
+    <rdfs:comment xml:lang="en">dual channel monitor data</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#MONITOR"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#BSCU_status">
+    <rdfs:comment xml:lang="en">status of the BSCU</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#BSCU_STATUS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#hyd_status">
+    <rdfs:comment xml:lang="en">hydraulic pressure to the BSCU</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#HYD_STATUS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_data">
+    <rdfs:comment xml:lang="en">actual data for each wheel</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#TRUCK"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#parking_brake_lever">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://Ontology_BSCU/BSCU#BSCU_STATUS"/>
+          <owl:Class rdf:about="http://Ontology_BSCU/BSCU#PILOT_CONTROLS"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#COMMAND_STATUS"/>
+    <rdfs:comment xml:lang="en">status of the parking brake lever set by pilot</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#earth_reference_data">
+    <rdfs:comment xml:lang="en">earth reference data</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#EARTH_REFERENCE_DATA"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#mode">
+    <rdfs:comment xml:lang="en">BSCU mode: normal, alternate, emergency</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#MODE"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#validity">
+    <rdfs:comment xml:lang="en">BSCU validity status</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#VALIDITY"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#MONITOR"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#autobrake_selector">
+    <rdfs:comment xml:lang="en">status of the autobrake switch set by pilot</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#AUTOBRAKE_SELECTION"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#PILOT_CONTROLS"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://Ontology_BSCU/BSCU#pedal_pos">
+    <rdfs:comment xml:lang="en">brake command from each of the pilot's pedals</rdfs:comment>
+    <rdfs:range rdf:resource="http://Ontology_BSCU/BSCU#PEDAL_POS"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#PILOT_CONTROLS"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#emergency_accumulator">
+    <rdfs:comment xml:lang="en">BSCU command of the emergency accumulator</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#tra">
+    <rdfs:comment xml:lang="en">thrust lever resolver angle</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#ENGINE_CONTROLS"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#tire_pressure_ind">
+    <rdfs:comment xml:lang="en">indicated tire pressure</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#_value_int">
+    <rdfs:comment xml:lang="en">implied property used in decomposition</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#ground_speed">
+    <rdfs:comment xml:lang="en">ground speed</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#EARTH_REFERENCE_DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_speed_ind">
+    <rdfs:comment xml:lang="en">indicated wheel speed</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#brake_status">
+    <rdfs:comment xml:lang="en">BSCU commanded state of the brakes</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#BSCU_STATUS"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#power_value">
+    <rdfs:comment xml:lang="en">input power value</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#POWER_IN"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#threshold">
+    <rdfs:comment xml:lang="en">minimum hydraulic pressure</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#HYD_STATUS"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#pitch">
+    <rdfs:comment xml:lang="en">pitch attitude</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#EARTH_REFERENCE_DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#pressure">
+    <rdfs:comment xml:lang="en">hydraulic pressure</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#HYD_STATUS"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_shutoff">
+    <rdfs:comment xml:lang="en">anti-skid shutoff</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#COMMAND"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#brake_temp_ind">
+    <rdfs:comment xml:lang="en">indicated brake temperature</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#_value">
+    <rdfs:comment xml:lang="en">implied property used in decomposition</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_mon">
+    <rdfs:comment xml:lang="en">anti-skid monitor</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#COMMAND"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#anti_skid_cmd">
+    <rdfs:comment xml:lang="en">anti-skid command</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#COMMAND"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#tire_pressure">
+    <rdfs:comment xml:lang="en">actual tire pressure</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#brake_temp">
+    <rdfs:comment xml:lang="en">actual brake temperature</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#pedal_pos_value">
+    <rdfs:comment xml:lang="en">pilot commanded pedal position</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#PEDAL_POS"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#wheel_speed">
+    <rdfs:comment xml:lang="en">actual wheel speed</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#WHEEL_DATA"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://Ontology_BSCU/BSCU#long_accel">
+    <rdfs:comment xml:lang="en">longitudinal acceleration</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="http://Ontology_BSCU/BSCU#EARTH_REFERENCE_DATA"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
